@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estanislao Molinas | IR and AI Strategy</title>
+    <meta name="description" content="Portfolio of Estanislao Molinas - IR and AI Strategy.">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-eval' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: *;">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corpBlue: { 50: '#eff6ff', 100: '#dbeafe', 500: '#0056b3', 600: '#004494', 900: '#1e3a8a' }
+                    },
+                    fontFamily: {
+                        sans: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        #canvas-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; overflow: hidden; }
+        .fade-overlay { position: absolute; bottom: 0; left: 0; width: 100%; height: 150px; background: linear-gradient(to top, white, transparent); z-index: -1; }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased font-sans selection:bg-corpBlue-100 selection:text-corpBlue-900 relative">
+
+    <header class="w-full border-b border-gray-100 py-5 sticky top-0 bg-white/90 backdrop-blur-sm z-50">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold text-gray-900 tracking-tight">Estanislao Molinas</h1>
+                <p class="text-[10px] sm:text-xs text-corpBlue-500 font-bold uppercase tracking-widest mt-0.5">IR and AI Strategy</p>
+            </div>
+            <div class="flex gap-4 items-center">
+                <a href="https://www.linkedin.com/in/estanislao-molinas-4057ba1b8" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-corpBlue-500 transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative w-full overflow-hidden">
+        <div id="canvas-container"></div>
+        <div class="fade-overlay"></div>
+
+        <main class="max-w-4xl mx-auto px-6 pt-12 pb-16 sm:pt-20 sm:pb-24 text-center relative z-10">
+            
+            <div class="mb-8 relative inline-block">
+                <img src="./profile.jpeg" 
+                     alt="Estanislao Molinas" 
+                     class="w-32 h-32 sm:w-40 sm:h-40 rounded-full border-4 border-white shadow-xl mx-auto object-cover relative z-10">
+                <div class="absolute inset-0 bg-corpBlue-500 blur-2xl opacity-20 rounded-full transform scale-110 -z-0"></div>
+            </div>
+
+            <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6 tracking-tight leading-tight">
+                Merging an International Relations background with <br class="hidden sm:block">
+                <span class="text-corpBlue-500">AI top-tier tech.</span>
+            </h2>
+            
+            <div class="text-lg text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto bg-white/60 backdrop-blur-sm rounded-lg p-4 text-left sm:text-center">
+                <p class="mb-4">Advanced International Relations student at the Universidad Católica de Santa Fe. Actively involved in academic research and serving as a teaching assistant in International Relations Theory. Member of Observatorio de Política Internacional. Fellow student on a Dr. Roberto Miranda's research project on Argentine foreign policy.</p>
+                <p class="mb-4">Professionally, I have experience across the NGO realm and the IT industry at a junior seniority level. Having worked in the latter in SEO and PM positions. I've developed basic data analysis reports on Looker and conducted content marketing campaigns for global stage clients. Holding a professional certification in Project Management issued by Google.</p>
+                <p>Technically speaking, I'm taking my first steps in Python, SQL, Power BI, Excel, and basic AI automations. Summing up, my goal is to build a hybrid professional profile capable of merging my theoretical background on political science with market-oriented tech skills.</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+                <a href="https://calendar.app.google/wPr5Hxj296MLwYpx8" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex justify-center items-center px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-corpBlue-500 hover:bg-corpBlue-600 transition-all shadow-lg shadow-corpBlue-500/20 hover:shadow-corpBlue-500/30">
+                   Book a Meeting
+                </a>
+                
+                <a href="./cv.pdf" 
+                   target="_blank"
+                   class="inline-flex justify-center items-center px-8 py-3.5 border border-gray-200 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm">
+                   Download CV
+                </a>
+            </div>
+        </main>
+    </section>
+
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 text-left border-t border-gray-100 pt-16">
+            <div class="md:col-span-7 space-y-12">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-corpBlue-500"></span> Selected Experience</h3>
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-1"><h4 class="text-lg font-bold text-gray-900 group-hover:text-corpBlue-500 transition-colors">AI Implementation Consultant</h4><span class="text-xs font-mono text-gray-400 whitespace-nowrap ml-4">Oct 2025 - Present</span></div>
+                    <p class="text-sm text-corpBlue-600 font-medium mb-2">ASSAL (Ministry of Health, Santa Fe)</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Strategic consulting for the implementation of AI in educational certifications and institutional branding.</p>
+                </div>
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-1"><h4 class="text-lg font-bold text-gray-900 group-hover:text-corpBlue-500 transition-colors">Co-Founder</h4><span class="text-xs font-mono text-gray-400 whitespace-nowrap ml-4">Aug 2025 - Present</span></div>
+                    <p class="text-sm text-corpBlue-600 font-medium mb-2">Teléfono Rojo</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Educational initiative to democratize knowledge in IR, Economics, and Political Philosophy. Content co-creation and digital strategy.</p>
+                </div>
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-1"><h4 class="text-lg font-bold text-gray-900 group-hover:text-corpBlue-500 transition-colors">Research Fellow & Teaching Assistant</h4><span class="text-xs font-mono text-gray-400 whitespace-nowrap ml-4">Mar 2025 - Present</span></div>
+                    <p class="text-sm text-corpBlue-600 font-medium mb-2">Universidad Católica de Santa Fe</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Research on Argentine Foreign Policy under Dr. Roberto Miranda. TA for International Relations Theory.</p>
+                </div>
+                <div class="group">
+                    <div class="flex justify-between items-baseline mb-1"><h4 class="text-lg font-bold text-gray-900 group-hover:text-corpBlue-500 transition-colors">Junior SEO Analyst</h4><span class="text-xs font-mono text-gray-400 whitespace-nowrap ml-4">Jan 2025 - Sep 2025</span></div>
+                    <p class="text-sm text-corpBlue-600 font-medium mb-2">Refindable</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Data analysis using Looker Studio, content marketing campaign execution, and SEO optimization for global clients.</p>
+                </div>
+            </div>
+            <div class="md:col-span-5 space-y-12">
+                <div>
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-corpBlue-500"></span> Education</h3>
+                    <div class="space-y-6">
+                        <div><h4 class="text-base font-bold text-gray-900">BA in International Relations</h4><p class="text-sm text-gray-500">Universidad Católica de Santa Fe</p><p class="text-xs text-gray-400 mt-1">2022 - 2026 (In Progress) | GPA 4.0</p></div>
+                        <div><h4 class="text-base font-bold text-gray-900">CUIASMUS Exchange Program</h4><p class="text-sm text-gray-500">Università degli Studi di Torino</p><p class="text-xs text-gray-400 mt-1">Global Law & Transnational Studies</p></div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-corpBlue-500"></span> Tech Stack</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full text-xs font-medium text-gray-600">Google Workspace</span>
+                        <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full text-xs font-medium text-gray-600">Looker Studio</span>
+                        <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full text-xs font-medium text-gray-600">Python (Basic)</span>
+                        <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full text-xs font-medium text-gray-600">SQL (Basic)</span>
+                        <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full text-xs font-medium text-gray-600">Figma</span>
+                        <span class="px-3 py-1 bg-gray-50 border border-gray-100 rounded-full text-xs font-medium text-gray-600">Trello/Notion</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-corpBlue-500"></span> Certifications</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3"><span class="text-sm text-gray-600"><strong>Google</strong> Project Management</span></li>
+                        <li class="flex items-start gap-3"><span class="text-sm text-gray-600"><strong>PLIDA B2</strong> Italian (Dante Alighieri)</span></li>
+                        <li class="flex items-start gap-3"><span class="text-sm text-gray-600"><strong>AWS</strong> Machine Learning Organization</span></li>
+                        <li class="flex items-start gap-3"><span class="text-sm text-gray-600">Virtual Intl. Hackathon 2025</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="max-w-5xl mx-auto px-6 mt-24 mb-10 pt-10 border-t border-gray-100 text-center">
+        <div class="flex justify-center gap-8 mb-6">
+            <a href="mailto:estanislao.molinasir@gmail.com" class="text-sm text-gray-500 hover:text-corpBlue-500 transition-colors">Email</a>
+            <a href="https://www.linkedin.com/in/estanislao-molinas-4057ba1b8" target="_blank" class="text-sm text-gray-500 hover:text-corpBlue-500 transition-colors">LinkedIn</a>
+            <a href="#" target="_blank" class="text-sm text-gray-500 hover:text-corpBlue-500 transition-colors">GitHub</a>
+        </div>
+        <p class="text-xs text-gray-400">&copy; <script>document.write(new Date().getFullYear())</script> Estanislao Molinas. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 400, 0.1, 1000); 
+        const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        container.appendChild(renderer.domElement);
+        const geometry = new THREE.IcosahedronGeometry(10, 2); 
+        const material = new THREE.MeshBasicMaterial({ color: 0x0056b3, wireframe: true, transparent: true, opacity: 0.15 });
+        const globe = new THREE.Mesh(geometry, material);
+        scene.add(globe);
+        camera.position.z = 18;
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / (window.innerHeight < 600 ? 600 : window.innerHeight);
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener('resize', onWindowResize);
+        onWindowResize(); 
+        let mouseX = 0, mouseY = 0;
+        document.addEventListener('mousemove', (event) => {
+            mouseX = (event.clientX - window.innerWidth / 2) * 0.001;
+            mouseY = (event.clientY - window.innerHeight / 2) * 0.001;
+        });
+        function animate() {
+            requestAnimationFrame(animate);
+            globe.rotation.y += 0.002;
+            globe.rotation.x += 0.001;
+            globe.rotation.y += mouseX * 0.05;
+            globe.rotation.x += mouseY * 0.05;
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>
